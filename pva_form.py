@@ -4,8 +4,8 @@ responce = {
     "First Name": "your firstname here",
     "Last Name": "your lastname here",
     "Student Number": "student number ere",
-    "Success": "Yes"
 }
+# need to add javascript parser to automatically update the codes
 codes = {
     "First Name": 911369318,
     "Last Name": 1500907496,
