@@ -1,6 +1,6 @@
 import re, json
 # replace the following values with the information you wish to send to the form. 
-responce = json.read(open("entries.json", "r"))
+responce = json.load(open("entries.json", "r"))
 
 # use autosubmit = True for auto submit
 autosubmit = False
