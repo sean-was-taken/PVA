@@ -1,21 +1,10 @@
-#--------- settings --------#
-
+import re, json
 # replace the following values with the information you wish to send to the form. 
-responce = {
-    "First Name": "Hello",
-    "Last Name": "World",
-    "Student Number": 666666, 
-    "Grade Level": 7,
-    "unwanted classes": "No", 
-    "another school": "No" 
-}
+responce = json.read(open("entries.json", "r"))
 
 # use autosubmit = True for auto submit
 autosubmit = False
 
-#-------- settings --------#
-
-import re
 
 # read entries
 with open("entries.txt", "r") as d:
