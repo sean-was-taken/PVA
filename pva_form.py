@@ -1,26 +1,34 @@
-import urllib.request
+import re
 
-# url of form. 
-form = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/viewform?"
+# read entries
+with open("entries.txt", "r") as d:
+    entries = d.read()
 
-with urllib.request.urlopen(form) as page:
-    data = page.read().decode('urf-8')
+# preprocessing
+tmp = re.findall(f'\d+', entries)
+tmp = list(map(int, tmp))
+tmp = list(filter(lambda i: i > 1000 and i < 1000000000000000, tmp))
+entries = []
 
-print(data)
-exit(1)
+# extract entries
+for x in range(1, len(tmp), 2):
+    entries.append(tmp[x])
+print(entries)
+
 responce = {
     "First Name": "your firstname here",
     "Last Name": "your lastname here",
     "Student Number": "student number here",
 }
-# need to add javascript parser to automatically update the codes
-codes = {
-    "First Name": 911369318,
-    "Last Name": 1500907496,
-    "Student Number": 2050994802
-}
-for name, code in codes.items():
-    page += f"entry.{code}={responce.get(name)}&"
 
-print(page)
+parser = {
+    "First Name": entries[0],
+    "Last Name": entries[1],
+    "Student Number": 205099
+}
+url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/viewform?"
+for name, code in parser.items():
+    url += f"entry.{code}={responce.get(name)}&"
+
+print(url)
 
