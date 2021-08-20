@@ -1,5 +1,13 @@
-base_url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/viewform?"
+import urllib.request
 
+# url of form. 
+form = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/viewform?"
+
+with urllib.request.urlopen(form) as page:
+    data = page.read().decode('urf-8')
+
+print(data)
+exit(1)
 responce = {
     "First Name": "your firstname here",
     "Last Name": "your lastname here",
@@ -12,7 +20,7 @@ codes = {
     "Student Number": 2050994802
 }
 for name, code in codes.items():
-    base_url += f"entry.{code}={responce.get(name)}&"
+    page += f"entry.{code}={responce.get(name)}&"
 
-print(base_url)
+print(page)
 
