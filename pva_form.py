@@ -6,8 +6,8 @@ responce = {
     "Last Name": "World",
     "Student Number": 666666, 
     "Grade Level": 7,
-    "ans1": "No", 
-    "ans2": "No" 
+    "unwanted classes": "No", 
+    "another school": "No" 
 }
 
 # use autosubmit = True for auto submit
@@ -36,8 +36,8 @@ parser = {
     "Last Name": entries[1],
     "Student Number": entries[2],
     "Grade Level": entries[3],
-    "ans1": entries[4],
-    "ans2": entries[5]
+    "unwanted classes": entries[4],
+    "another school": entries[5]
 }
 url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/"
 if autosubmit: url += "formresponce?"
