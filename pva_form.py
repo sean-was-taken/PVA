@@ -3,7 +3,7 @@ base_url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5
 responce = {
     "First Name": "your firstname here",
     "Last Name": "your lastname here",
-    "Student Number": "student number ere",
+    "Student Number": "student number here",
 }
 # need to add javascript parser to automatically update the codes
 codes = {
