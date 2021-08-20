@@ -24,12 +24,12 @@ with open("entries.txt", "r") as d:
 # preprocessing
 tmp = re.findall(f'\d+', entries)
 tmp = list(filter(lambda i: i > 1000 and i < 1000000000000000, list(map(int, tmp))))
-entries = []
 
 # extract entries
+entries = []
 for x in range(1, len(tmp), 2):
     entries.append(tmp[x])
-print(entries)
+#print(entries)
 
 parser = {
     "First Name": entries[0],
