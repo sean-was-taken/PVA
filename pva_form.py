@@ -19,7 +19,7 @@ for x in range(1, len(tmp), 2):
     entries.append(tmp[x])
 
 url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/"
-if autosubmit: url += "formresponce?"
+if autosubmit: url += "formResponse?"
 else: url += "viewform?"
 
 for x in range(len(entries)+1):
