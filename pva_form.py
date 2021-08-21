@@ -32,8 +32,12 @@ url = "https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJ
 if autosubmit: url += "formresponce?"
 else: url += "viewform?"
 
-for name, code in parser.items():
-    url += f"entry.{code}={responce.get(name)}&"
+for x in range(len(entries)+1):
+    if x < len(list(responce.values())):
+        url += f"entry.{entries[x]}={list(responce.values())[x]}&"
+    
+#for name, code in parser.items():
+#    url += f"entry.{code}={responce.get(name)}&"
 
 print(url)
 
