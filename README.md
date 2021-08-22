@@ -1,7 +1,9 @@
-# About this repository
-this repository contains all the work I have done to make virtual learning easier. 
-my email: xy2933@pleasantonusd.net
+# PVA form generator
+usage:
+* clone the repository
+* edit the entries.json file and replace the examples with your information
+* run with python pva_form.py
+* the url will be written to the terminal
 
-# Credits
-* XANADryden https://github.com/XANADryden
-
+todo:
+* make script more automated
