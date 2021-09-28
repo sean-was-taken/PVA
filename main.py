@@ -45,7 +45,7 @@ if __name__ == "__main__":
     parser.add_argument("-u", "--url", action="store",
                         default="https://docs.google.com/forms/d/e/1FAIpQLSdBkt1jwgWZgpxhKUdQUM9S3Gn5qzXKJrtW0_HZbPAJaOeo5w/", help="url to form")
     parser.add_argument("-a", "--autosubmit", action="store",
-                        default="false", help="auto submit the form without user action")
+                        default="true", help="auto submit the form without user action")
     parser.add_argument("-o", "--output", action="store", default="stdout",
                         help="file to write to, stdout for print to terminal")
     s, v, u, a = parser.parse_args().source, parser.parse_args(
